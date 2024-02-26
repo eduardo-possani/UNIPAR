@@ -1,40 +1,33 @@
 function verificarMaiorIdade(idade) {
-
-    return idade < 18 ? 'Maior de idade' : 'Menor de idade';
-
+    return idade >= 18 ? 'Maior de idade' : 'Menor de idade';
 }
-
-
-//// complete o códigoFaça com que a variável arra tenha uma lista ordenada de de 10 posições de 0 a 9
 
 function orderArray() {
-
-    let arr = [1, 2, 3, 6, 7, 9]
-    
-    return arr
+    let arr = Array.from({length: 10}, (_, i) => i);
+    return arr;
 }
 
-/// Substitua os dados do objeto reatribuído  e delete o campo idade sem alterar a declaração do mesmo
 function meusDados() {
     let pessoa = {
-        nome: 'jhon doe',
-        idade: '30',
+        nome: 'John Doe',
+        idade: 30,
         cidade: 'New York'
-    }
-
+    };
+    delete pessoa.idade;
     return pessoa;
 }
 
-// Manipule o Array para que ele traga as informações pedidas no objeto e atribua nas posições do objeto
-// ex: ordemAlfabetica: animais.short... 
 function manipulaArray() {
-    let animais = ['cacohrro', 'gato', 'abelha', 'rato', 'leão',  'galinha']
+    let animais = ['cachorro', 'gato', 'abelha', 'rato', 'leão', 'galinha'];
+    let ordemAlfabetica = animais.sort();
+    let primeiro = animais[0];
+    let ultimo = animais[animais.length - 1];
+    let tamanhoDaLista = animais.length;
 
     return {
         ordemAlfabetica,
         primeiro,
         ultimo,
         tamanhoDaLista
-        
-    }
- }
+    };
+}
